@@ -3,7 +3,7 @@
 
 Project:    Jenkins Audio
 Version:    1.1
-Last change:    04/30/19 [updated #MAIN cards]
+Last change:    05/02/19 [updated #LOGO]
 Assigned to:    John Grattan
 Primary use:    Portfolio
 -------------------------------------------------------------------*/
@@ -71,10 +71,11 @@ body {
   padding-right: 20px;
 
   grid-template-columns: auto;
-  grid-template-rows: 80px 1000px 80px 80px;
+  grid-template-rows: 80px 80px 1000px 80px 80px;
   grid-gap: 20px;
   
-  grid-template-areas: "header"
+  grid-template-areas: "logo"
+                       "header"
                        "main"
                        "social"
                        "footer";
@@ -86,11 +87,44 @@ body {
   text-align: center;
 }
 
+
+
+
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
 #header {
   grid-area: header;
 
   background: #9e5245;
 }
+
+
+
+
+
+/*------------------------------------*\
+  #LOGO
+\*------------------------------------*/
+
+#logo {
+  grid-area: logo;
+  align-self: center;
+
+  display: block;
+  font: 3.0em "PT Sans Narrow", sans-serif;
+  letter-spacing: 1.0em;
+  margin-top: 15px;
+  text-align: center; 
+  text-shadow: 3px 3px 5px black;
+  text-transform: uppercase;
+}
+
+
+
+
 
 /*------------------------------------*\
   #NAVBAR
@@ -452,7 +486,8 @@ body {
 }
 
 .card-img {
-  position: relative;
+  border: white 1px solid;
   max-width: 100%;
   max-height: 100%;
+  position: relative;
 }
