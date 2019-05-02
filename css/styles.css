@@ -3,7 +3,7 @@
 
 Project:    Jenkins Audio
 Version:    1.1
-Last change:    04/30/19 [updated #SOCIAL]
+Last change:    04/30/19 [updated #MAIN cards]
 Assigned to:    John Grattan
 Primary use:    Portfolio
 -------------------------------------------------------------------*/
@@ -434,12 +434,14 @@ body {
   color: white;
   font: 1.5em "Open Sans Condensed", sans-serif;
   padding-bottom: 20px;
+  text-shadow: 3px 3px 3px black;
 }
 
 .flip-card-front p {
   font-size: 0.8em;
   padding-top: 20px;
   text-align: justify;
+  text-shadow: 3px 3px 5px black;
 }
 
 /* Style the back side */
