@@ -1,26 +1,33 @@
 /*------------------------------------------------------------------
+
 [Master Stylesheet]
 
 Project:    Jenkins Audio
 Version:    1.1
-Last change:    05/02/19 [updated #LOGO]
+Last change:    05/03/19 [updated #LOGO]
 Assigned to:    John Grattan
 Primary use:    Portfolio
+
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
+
 [Table of contents]
 
 1. #GLOBAL
 2. #WRAPPER
-3. #NAVBAR
-4. #MAIN
-5. #SOCIAL
-6. #FOOTER
-7. #MEDIA QUERIES
-8. #DEBUG
+3. #LOGO
+4. #NAVBAR
+5. #MAIN
+6. #SOCIAL
+7. #FOOTER
+8. #MEDIA QUERIES
+9. #DEBUG
 
 -------------------------------------------------------------------*/
+
+
+
 
 
 /*------------------------------------*\
@@ -52,6 +59,8 @@ body {
   min-height: 380px;
   position: relative;
 }
+
+
 
 
 
@@ -92,20 +101,6 @@ body {
 
 
 /*------------------------------------*\
-  #HEADER
-\*------------------------------------*/
-
-#header {
-  grid-area: header;
-
-  background: #9e5245;
-}
-
-
-
-
-
-/*------------------------------------*\
   #LOGO
 \*------------------------------------*/
 
@@ -129,6 +124,12 @@ body {
 /*------------------------------------*\
   #NAVBAR
 \*------------------------------------*/
+
+#header {
+  grid-area: header;
+
+  background: #9e5245;
+}
 
 #nav {
   display: grid;
@@ -247,6 +248,77 @@ body {
 
 .main-row-2 {
   grid-area: testimonials;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: auto;
+  height: 50%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgba(224,224,224,0.2);
+  border-radius: 10px;
+}
+
+.flip-card-front h3 {
+  color: white;
+  font: 1.5em "Open Sans Condensed", sans-serif;
+  padding-bottom: 20px;
+  text-shadow: 3px 3px 3px black;
+}
+
+.flip-card-front p {
+  font-size: 0.8em;
+  padding-top: 20px;
+  text-align: justify;
+  text-shadow: 3px 3px 5px black;
+}
+
+.flip-card-back {
+  background-color: #5a798d;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back h4 {
+  color: white;
+  font: 1.0em "Open Sans Condensed", sans-serif;
+  text-shadow: 2px 2px 3px black;
+}
+
+.flip-card-back p {
+  font-size: 0.8em;
+  padding: 10px 0;
+  text-align: justify;
+  text-shadow: 2px 2px 5px black;
+}
+
+.card-img {
+  border: white 1px solid;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
 }
 
 
@@ -424,70 +496,3 @@ body {
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 } */
-
-
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: auto;
-  height: 50%;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: rgba(224,224,224,0.2);
-/*  color: white;*/
-}
-
-.flip-card-front h3 {
-  color: white;
-  font: 1.5em "Open Sans Condensed", sans-serif;
-  padding-bottom: 20px;
-  text-shadow: 3px 3px 3px black;
-}
-
-.flip-card-front p {
-  font-size: 0.8em;
-  padding-top: 20px;
-  text-align: justify;
-  text-shadow: 3px 3px 5px black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: #5a798d;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.card-img {
-  border: white 1px solid;
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
-}
