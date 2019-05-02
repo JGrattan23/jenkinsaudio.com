@@ -1,0 +1,456 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    Jenkins Audio
+Version:    1.1
+Last change:    04/30/19 [updated #SOCIAL]
+Assigned to:    John Grattan
+Primary use:    Portfolio
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. #GLOBAL
+2. #WRAPPER
+3. #NAVBAR
+4. #MAIN
+5. #SOCIAL
+6. #FOOTER
+7. #MEDIA QUERIES
+8. #DEBUG
+
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------*\
+  #GLOBAL
+\*------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: white;
+  font: 16px 'PT Sans Narrow', sans-serif;
+  height: 100%;
+  width: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg { 
+  background-image: url(../imgs/mixer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; 
+  min-height: 380px;
+  position: relative;
+}
+
+
+
+/*------------------------------------*\
+  #WRAPPER
+\*------------------------------------*/
+
+.wrapper {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  grid-template-columns: auto;
+  grid-template-rows: 80px 1000px 80px 80px;
+  grid-gap: 20px;
+  
+  grid-template-areas: "header"
+                       "main"
+                       "social"
+                       "footer";
+  min-width: 400px;
+}
+
+.wrapper div {
+  padding: 20px;
+  text-align: center;
+}
+
+#header {
+  grid-area: header;
+
+  background: #9e5245;
+}
+
+/*------------------------------------*\
+  #NAVBAR
+\*------------------------------------*/
+
+#nav {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: 80px;
+  grid-gap: 20px;
+
+  grid-template-areas: "logo  services  contact  about  shop";
+  min-width: 400px;
+}
+
+.nav-links a {
+  color: white;
+  font: 2em 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #15b4a9;
+  /* border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 0 1em; */
+}
+
+.nav-col-1 {
+  grid-area: logo;
+  align-self: center;
+}
+
+.nav-col-2 {
+  grid-area: services;
+  align-self: center;
+}
+
+.nav-col-3 {
+  grid-area: contact;
+  align-self: center;
+}
+
+.nav-col-4 {
+  grid-area: about;
+  align-self: center;
+}
+
+.nav-col-5 {
+  grid-area: shop;
+  align-self: center;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  min-width: 160px;
+  position: relative;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;  
+  display: block;
+  font-size: 1.5em;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+
+/*------------------------------------*\
+  #MAIN
+\*------------------------------------*/
+
+#main {
+  grid-area: main;
+
+  font-size: 1.5em;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 100px;
+
+  grid-template-areas: "production    mixing    mastering"
+                        "testimonials testimonials testimonials";
+
+  min-width: 400px;
+}
+
+.main-col-1 {
+  grid-area: production;
+}
+
+.main-col-2 {
+  grid-area: mixing;
+}
+
+.main-col-3 {
+  grid-area: mastering;
+}
+
+.main-row-2 {
+  grid-area: testimonials;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #SOCIAL
+\*------------------------------------*/
+
+#social {
+  grid-area: social;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+
+  grid-template-areas: "fb  insta  twitter  yt  sc";
+  min-width: 400px;
+}
+
+.social-links img {
+  opacity: 0.8;
+  -ms-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.social-links img:hover {
+  background-color: #9e5245;
+  border-radius: 50%;
+  opacity: 1;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.social-size {
+  width: 50px;
+}
+
+.social-col-1 {
+  grid-area: fb;
+}
+
+.social-col-2 {
+  grid-area: insta;
+}
+
+.social-col-3 {
+  grid-area: twitter;
+}
+
+.social-col-4 {
+  grid-area: yt;
+}
+
+.social-col-5 {
+  grid-area: sc;
+}
+
+
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+#footer {
+  grid-area: footer;
+
+  background-color: #272727;
+  border: #5a798d solid 1px;
+  font: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: auto;
+  /* grid-gap: 20px; */
+
+  grid-template-areas: "copyright design";
+  min-width: 400px;
+}
+
+.footer-links a {
+  color: #15b4a9;
+  font: 1em 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #9e5245;
+}
+
+
+.footer-col-1 {
+  grid-area: copyright;
+  align-self: center;
+}
+
+.footer-col-2 {
+  grid-area: design;
+  align-self: center;
+}
+
+
+
+/*------------------------------------*\
+  #LOGO
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+  #MEDIA-QUERIES
+\*------------------------------------*/
+
+/* @media (min-width: 768px) {
+  .full-container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .full-container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .full-container {
+    width: 1170px;
+  }
+} */
+
+
+/* @mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+// usage
+.my-box {
+  padding: 10px;
+  
+  @include for-desktop-up {
+    padding: 20px;
+  }
+} */
+
+/*------------------------------------*\
+  #DEBUG
+\*------------------------------------*/
+
+
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
+
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: auto;
+  height: 50%;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgba(224,224,224,0.2);
+/*  color: white;*/
+}
+
+.flip-card-front h3 {
+  color: white;
+  font: 1.5em "Open Sans Condensed", sans-serif;
+  padding-bottom: 20px;
+}
+
+.flip-card-front p {
+  font-size: 0.8em;
+  padding-top: 20px;
+  text-align: justify;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #5a798d;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
