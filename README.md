@@ -1,5 +1,5 @@
-# Project name: jenkinsaudio.com
-## Description: Portfolio site showcasing audio engineering skills and services. The services offered are mixing, mastering and production. Site will also include link to shop. 
+# jenkinsaudio.com
+## Portfolio site showcasing audio engineering skills and services. The services offered are mixing, mastering and production. Site will also include link to shop. 
 
 Table of Contents: Optionally, include a table of contents in order to allow other people to quickly navigate especially long or detailed READMEs.
 
