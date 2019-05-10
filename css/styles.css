@@ -50,13 +50,27 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1 { font-size: 4.0rem; }
+
+h2 { font-size: 2.5rem; }
+
+h3 { font-size: 2.25rem; }
+
+h4 { font-size: 1.8rem; }
+
+h5 { font-size: 1.5rem; }
+
+h6 { font-size: 1.2rem; }
+
+p { font-size: 1.2rem; }
+
 .bg { 
   background-attachment: fixed;
   background-image: url(../imgs/mixer-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%; 
+  height: 100%;
   min-height: 380px;
   position: relative;
 }
@@ -108,11 +122,12 @@ body {
 #logo {
   grid-area: logo;
   align-self: center;
-
-  display: block;
-  font: 3.0em "PT Sans Narrow", sans-serif;
-  letter-spacing: 1.0em;
-  margin-top: 15px;
+  
+  color: lightgray;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  margin-top: 1.0rem;
+  padding-left: 3.5rem;
   text-align: center; 
   text-shadow: 3px 3px 5px black;
   text-transform: uppercase;
@@ -145,7 +160,7 @@ body {
 
 .nav-links a {
   color: white;
-  font: 2em 'Open Sans Condensed', sans-serif;
+  font: 2.0em 'Open Sans Condensed', sans-serif;
   text-decoration: none;
 }
 
@@ -153,7 +168,7 @@ body {
   color: #15b4a9;
   /* border-left: 1px solid white;
   border-right: 1px solid white;
-  padding: 0 1em; */
+  padding: 0 1.0em; */
 }
 
 .nav-col-1 {
@@ -225,30 +240,36 @@ body {
   display: grid;
 
   grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 200px 1fr 200px;
   grid-column-gap: 20px;
-  grid-row-gap: 100px;
 
-  grid-template-areas: "production    mixing    mastering"
+  grid-template-areas:  "headline headline headline"
+                        "production    mixing    mastering"
                         "testimonials testimonials testimonials";
 
   min-width: 400px;
 }
 
-.main-col-1 {
-  grid-area: production;
+.main-row-1 { grid-area: headline; }
+
+/** Row 2 (3 columns) **/
+.main-col-1 { grid-area: production; }
+.main-col-2 { grid-area: mixing; }
+.main-col-3 { grid-area: mastering; }
+
+.main-row-3 { grid-area: testimonials; }
+
+#headline {
+  color: #81c1e8;
+  font-weight: 400;
+  display: block;
+  text-shadow: 3px 3px 5px black; 
 }
 
-.main-col-2 {
-  grid-area: mixing;
-}
-
-.main-col-3 {
-  grid-area: mastering;
-}
-
-.main-row-2 {
-  grid-area: testimonials;
+#subheadline {
+  display: block;
+  font-weight: 400;
+  text-shadow: 3px 3px 5px black; 
 }
 
 .flip-card {
@@ -267,9 +288,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
 
 .flip-card-front, .flip-card-back {
   position: absolute;
