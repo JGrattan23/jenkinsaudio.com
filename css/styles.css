@@ -4,7 +4,7 @@
 
 Project:    Jenkins Audio
 Version:    1.1
-Last change:    05/03/19 [updated #LOGO]
+Last change:    05/10/19 [updates: mobile first, social]
 Assigned to:    John Grattan
 Primary use:    Portfolio
 
@@ -71,7 +71,7 @@ p { font-size: 1.2rem; }
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  min-height: 380px;
+  min-width: 320px;
   position: relative;
 }
 
@@ -87,15 +87,15 @@ p { font-size: 1.2rem; }
   display: grid;
   height: 100%;
   width: 100%;
-  max-width: 1200px;
-  min-height: 400px;
+  /* max-width: 1200px;
+  min-height: 400px; */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+
 
   grid-template-columns: auto;
-  grid-template-rows: 80px 80px 1000px 80px 80px;
+  /* grid-template-rows: 80px 80px 1000px 80px 80px; */
+  grid-template-rows: auto;
   grid-gap: 20px;
   
   grid-template-areas: "logo"
@@ -103,11 +103,11 @@ p { font-size: 1.2rem; }
                        "main"
                        "social"
                        "footer";
-  min-width: 400px;
+  min-width: 320px;
 }
 
 .wrapper div {
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
 }
 
@@ -124,10 +124,11 @@ p { font-size: 1.2rem; }
   align-self: center;
   
   color: lightgray;
+  font-size: 1.0rem;
   font-weight: 400;
-  letter-spacing: 3.5rem;
+  letter-spacing: 1.0rem;
   margin-top: 1.0rem;
-  padding-left: 3.5rem;
+  padding-left: 1.0rem;
   text-align: center; 
   text-shadow: 3px 3px 5px black;
   text-transform: uppercase;
@@ -150,12 +151,23 @@ p { font-size: 1.2rem; }
 #nav {
   display: grid;
 
-  grid-template-columns: repeat(5, 1fr); 
-  grid-template-rows: 80px;
+  /* grid-template-columns: repeat(5, 1fr);  */
+  /* grid-template-rows: 80px; */
+  /* grid-template-rows: auto; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  
   grid-gap: 20px;
 
-  grid-template-areas: "logo  services  contact  about  shop";
-  min-width: 400px;
+  /* grid-template-areas: "logo  services  contact  about  shop"; */
+  /* grid-template-areas:  "logo"
+                        "services"
+                        "contact"
+                        "about"
+                        "shop"; */
+
+  grid-template-areas: "logo mobile";
+  min-width: 320px;
 }
 
 .nav-links a {
@@ -174,6 +186,7 @@ p { font-size: 1.2rem; }
 .nav-col-1 {
   grid-area: logo;
   align-self: center;
+  justify-self: center;
 }
 
 .nav-col-2 {
@@ -193,6 +206,11 @@ p { font-size: 1.2rem; }
 
 .nav-col-5 {
   grid-area: shop;
+  align-self: center;
+}
+
+.nav-col-mobile {
+  grid-area: mobile;
   align-self: center;
 }
 
@@ -228,6 +246,50 @@ p { font-size: 1.2rem; }
 
 
 
+.mobile-nav-button {
+  cursor: pointer;
+  height: 30px;
+  margin: 1.0rem auto;
+  width: 35px;
+  z-index: 9999;
+}
+
+.mobile-nav-button div {
+  padding: 0;
+}
+
+.mobile-nav-button .mobile-nav-button__line {
+  width: 100%;
+  height: 4px;
+  background: #0e0e0e;
+  position: relative;
+  transition: 1s ease;
+}
+.mobile-nav-button .mobile-nav-button__line:nth-of-type(2) {
+  margin: 0.5rem 0;
+}
+.mobile-nav-button .mobile-nav-button__line--1 {
+  transform: rotate(45deg);
+  top: 13px;
+  position: absolute;
+}
+.mobile-nav-button .mobile-nav-button__line--2 {
+  display: none;
+}
+.mobile-nav-button .mobile-nav-button__line--3 {
+  transform: rotate(135deg);
+  top: 13px;
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+
 /*------------------------------------*\
   #MAIN
 \*------------------------------------*/
@@ -239,15 +301,23 @@ p { font-size: 1.2rem; }
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: 200px 1fr 200px;
-  grid-column-gap: 20px;
+  /* grid-template-columns: repeat(5, 200px);  */
+  /* grid-template-rows: 200px 1fr 200px; */
+  grid-template-rows: auto repeat(3, 500px) auto;
+  /* grid-column-gap: 20px; */
 
-  grid-template-areas:  "headline headline headline"
+  /* grid-template-areas:  "headline headline headline"
                         "production    mixing    mastering"
-                        "testimonials testimonials testimonials";
+                        "testimonials testimonials testimonials"; */
 
-  min-width: 400px;
+  grid-template-areas:  "headline"
+                        "mixing" 
+                        "mastering"
+                        "production"
+                        "testimonials";
+
+
+  min-width: 320px;
 }
 
 .main-row-1 { grid-area: headline; }
@@ -264,6 +334,14 @@ p { font-size: 1.2rem; }
   font-weight: 400;
   display: block;
   text-shadow: 3px 3px 5px black; 
+}
+
+.head-break {
+  display: block;
+}
+
+.sub-break {
+  display: block;
 }
 
 #subheadline {
@@ -354,12 +432,13 @@ p { font-size: 1.2rem; }
 
   display: grid;
 
-  grid-template-columns: repeat(5, 1fr); 
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, 1fr); 
   grid-gap: 5px;
 
-  grid-template-areas: "fb  insta  twitter  yt  sc";
-  min-width: 400px;
+  grid-template-areas:  "fb  insta  twitter"
+                        "yt  sc email";
+  min-width: 320px;
 }
 
 .social-links img {
@@ -406,6 +485,10 @@ p { font-size: 1.2rem; }
   grid-area: sc;
 }
 
+.social-col-6 {
+  grid-area: email;
+}
+
 
 
 
@@ -423,12 +506,14 @@ p { font-size: 1.2rem; }
 
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr); 
+  /* grid-template-columns: repeat(2, 1fr);  */
   grid-template-rows: auto;
   /* grid-gap: 20px; */
 
-  grid-template-areas: "copyright design";
-  min-width: 400px;
+  /* grid-template-areas: "copyright design"; */
+  grid-template-areas:  "copyright"
+                        "design";
+  min-width: 320px;
 }
 
 .footer-links a {
@@ -464,47 +549,101 @@ p { font-size: 1.2rem; }
   #MEDIA-QUERIES
 \*------------------------------------*/
 
+@media (min-width: 400px) {
+  #logo {
+    font-size: 1.5rem;
+    letter-spacing: 1.0rem;
+    padding-left: 1.0rem;
+  }
+}
+
+@media (min-width: 526px) {
+  #logo {
+    font-size: 2.0rem;
+    letter-spacing: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 682px) {
+  #logo {
+    font-size: 2.5rem;
+    letter-spacing: 2.0rem;
+    padding-left: 2.0rem;
+  }
+}
+
 /* @media (min-width: 768px) {
-  .full-container {
-    width: 750px;
+  #logo {
+    font-size: 2.8rem;
+    letter-spacing: 1.8rem;
+    padding-left: 1.8rem;
+  }
+} */
+
+@media (min-width: 837px) {
+  #logo {
+    font-size: 3.0rem;
+    letter-spacing: 2.5rem;
+    padding-left: 2.5rem;
+  }
+
+  .head-break {
+    display: inline;
   }
 }
+
 @media (min-width: 992px) {
-  .full-container {
-    width: 970px;
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-}
-@media (min-width: 1200px) {
-  .full-container {
-    width: 1170px;
+
+  #logo {
+    font-size: 3.3rem;
+    letter-spacing: 2.8rem;
+    padding-left: 2.8rem;
   }
-} */
 
+  /* #nav {
 
-/* @mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
-}
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
-}
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
-}
-@mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
-}
-
-// usage
-.my-box {
-  padding: 10px;
   
-  @include for-desktop-up {
-    padding: 20px;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: 80px;
+    grid-gap: 20px;
+  
+    grid-template-areas: "logo  services  contact  about  shop";
+
+    min-width: 320px;
+  } */
+}
+
+@media (min-width: 1032px) {
+
+  #logo {
+    font-size: 3.5rem;
+    letter-spacing: 3.0rem;
+    padding-left: 3.0rem;
   }
-} */
+}
+
+@media (min-width: 1150px) {
+
+  #logo {
+    font-size: 3.8rem;
+    letter-spacing: 3.3rem;
+    padding-left: 3.3rem;
+  }
+}
+
+@media (min-width: 1190px) {
+
+  #logo {
+    font-size: 4.0rem;
+    letter-spacing: 3.5rem;
+    padding-left: 3.5rem;
+  }
+}
 
 /*------------------------------------*\
   #DEBUG
