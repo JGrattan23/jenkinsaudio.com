@@ -1,0 +1,37 @@
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+#footer {
+  @include fixedBottom();
+  background-color: $shadow;
+  border: $cardBack solid 1px;
+  font: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "copyright"
+    "design";
+  min-width: 320px;
+}
+
+.footer-links a {
+  color: $accent;
+  font: 1em 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: $midtone;
+}
+
+
+.footer-col-1 {
+  grid-area: copyright;
+  align-self: center;
+}
+
+.footer-col-2 {
+  grid-area: design;
+  align-self: center;
+}

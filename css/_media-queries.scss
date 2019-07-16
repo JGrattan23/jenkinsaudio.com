@@ -1,0 +1,99 @@
+/*------------------------------------*\
+  #MEDIA-QUERIES
+\*------------------------------------*/
+
+@media (min-width: 400px) {
+  #logo {
+    font-size: 1.5rem;
+    letter-spacing: 1.0rem;
+    padding-left: 1.0rem;
+  }
+}
+
+@media (min-width: 526px) {
+  #logo {
+    font-size: 2.0rem;
+    letter-spacing: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 682px) {
+  #logo {
+    font-size: 2.5rem;
+    letter-spacing: 2.0rem;
+    padding-left: 2.0rem;
+  }
+}
+
+/* @media (min-width: 768px) {
+  #logo {
+    font-size: 2.8rem;
+    letter-spacing: 1.8rem;
+    padding-left: 1.8rem;
+  }
+} */
+
+@media (min-width: 837px) {
+  #logo {
+    font-size: 3.0rem;
+    letter-spacing: 2.5rem;
+    padding-left: 2.5rem;
+  }
+
+  .head-break {
+    display: inline;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #logo {
+    font-size: 3.3rem;
+    letter-spacing: 2.8rem;
+    padding-left: 2.8rem;
+  }
+
+  /* #nav {
+
+  
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: 80px;
+    grid-gap: 20px;
+  
+    grid-template-areas: "logo  services  contact  about  shop";
+
+    min-width: 320px;
+  } */
+}
+
+@media (min-width: 1032px) {
+
+  #logo {
+    font-size: 3.5rem;
+    letter-spacing: 3.0rem;
+    padding-left: 3.0rem;
+  }
+}
+
+@media (min-width: 1150px) {
+
+  #logo {
+    font-size: 3.8rem;
+    letter-spacing: 3.3rem;
+    padding-left: 3.3rem;
+  }
+}
+
+@media (min-width: 1190px) {
+
+  #logo {
+    font-size: 4.0rem;
+    letter-spacing: 3.5rem;
+    padding-left: 3.5rem;
+  }
+}

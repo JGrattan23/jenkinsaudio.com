@@ -44,6 +44,7 @@ Primary use:    Portfolio
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,72 +54,82 @@ Primary use:    Portfolio
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Load Google Font families -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Fjalla+One|PT+Serif|PT+Sans+Narrow:400,700" rel="stylesheet">
- 
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Fjalla+One|PT+Serif|PT+Sans+Narrow:400,700"
+    rel="stylesheet">
+
   <!-- Load Master Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Jenkins Audio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="bg">
-    <section class="wrapper">
-      
-    <h1 id="logo">Jenkins Audio</h1>
-      
-      <header id="header">
-        <nav id="nav" class="nav-links">
-          <div class="nav-col-1"><a href="#">LOGO</a></div>
-          <!-- <section class="dropdown">
-            <div class="nav-col-2"><a href="#">SERVICES</a></div>
-              <div class="dropdown-content">
-                  <a href="#">MIXING</a>
-                  <a href="#">MASTERING</a>
-                  <a href="#">PRODUCTION</a>
-                </div>
-          </section>
-          <div class="nav-col-3"><a href="#">CONTACT</a></div>
-          <section class="dropdown">
-            <div class="nav-col-4"><a href="#">ABOUT</a></div>
-              <div class="dropdown-content">
-                  <a href="#">BIO</a>
-                  <a href="#">LICENSING</a>
-                  <a href="#">TESTIMONIALS</a>
-                </div>
-          </section> -->
-          <section>
-            <div class="nav-col-mobile">
-                <div class="mobile-nav-button">
-                  <div class="mobile-nav-button__line"></div>
-                  <div class="mobile-nav-button__line"></div>
-                  <div class="mobile-nav-button__line"></div>
-                </div>
-              </div>
-          </section>
-        </nav>
-      </header>
-      
+  <section id="home">
+    <div class="bg">
+      <section class="fixed-top">
+        <h1 id="logo">Jenkins Audio</h1>
+        <header id="header" role="banner">
+          <nav id="nav" class="nav" role="navigation">
+            <h2 id="dbmeter">db Meter</h2>
+            <!-- ACTUAL NAVIGATION MENU -->
+            <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
+              <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Store</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            </ul>
+
+            <!-- MENU TOGGLE BUTTON -->
+            <a href="#nav" class="nav__toggle" role="button" aria-expanded="false" aria-controls="menu">
+              <svg class="menuicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                <title>Toggle Menu</title>
+                <g>
+                  <line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5" />
+                  <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+                  <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+                  <line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5" />
+                  <circle class="menuicon__circle" r="23" cx="25" cy="25" />
+                </g>
+              </svg>
+            </a>
+
+            <!-- ANIMATED BACKGROUND ELEMENT -->
+            <div class="splash"></div>
+          </nav>
+        </header>
+      </section>
       <main id="main">
-        
-        <div class="main-row-1">
+        <div>
           <h1 id="headline">Professional. <span class="head-break">Expedient. Sensible.</span></h1>
-          <h4 id="subheadline">Compete commercially <span class="sub-break">while streamlining releases</span> <span class="sub-break">for half the price.</span></h4>
+          <h4 id="subheadline">Compete commercially <span class="sub-break">while streamlining releases</span> <span
+              class="sub-break">for half the price.</span></h4>
         </div>
-        
-        <div class="main-col-1">
+      </main>
+    </div> <!-- bg close -->
+  </section> <!-- home close-->
+
+  <!-- <div class="main-col-1">
           <section class="flip-card">
             <section class="flip-card-inner">
               <div class="flip-card-front">
                 <h3>MIXING</h3>
                 <img class="card-img" src="imgs/fl-studio-mixing.jpg" alt="Mixer">
-                <p>Achieve <strong>well balanced</strong>, <strong>professional mixes</strong> that <strong>translate properly</strong> across a wide range of audio systems. <strong>Studio quality equipment</strong> and <strong>award winning plugins</strong> will help shape, tone and color your sound <strong>exactly</strong> how you want it to be heard.</p>
+                <p>Achieve <strong>well balanced</strong>, <strong>professional mixes</strong> that <strong>translate
+                    properly</strong> across a wide range of audio systems. <strong>Studio quality equipment</strong>
+                  and <strong>award winning plugins</strong> will help shape, tone and color your sound
+                  <strong>exactly</strong> how you want it to be heard.</p>
               </div>
               <div class="flip-card-back">
-                <h4>Balance & Levels</h4> 
-                <p>Proper gain staging and leveling can even out a track and prevent distortion. Head room is imperative on final mixes to allow the mastering process to thrive.</p>
+                <h4>Balance & Levels</h4>
+                <p>Proper gain staging and leveling can even out a track and prevent distortion. Head room is imperative
+                  on final mixes to allow the mastering process to thrive.</p>
                 <h4>EQ & Compression</h4>
-                <p>Professional EQ can shape and control each vibration across the frequency spectrum to distinguish individual sounds. Purposeful compression can tame and resurface decibals, all while maintaining dynamic range.</p>
+                <p>Professional EQ can shape and control each vibration across the frequency spectrum to distinguish
+                  individual sounds. Purposeful compression can tame and resurface decibals, all while maintaining
+                  dynamic range.</p>
                 <h4>Reverb & Delay</h4>
-                <p>Add a new dimension to vocals and production by creating a sense of space, width and depth to help everything shine through.</p>
+                <p>Add a new dimension to vocals and production by creating a sense of space, width and depth to help
+                  everything shine through.</p>
               </div>
             </section>
           </section>
@@ -129,15 +140,23 @@ Primary use:    Portfolio
               <div class="flip-card-front">
                 <h3>MASTERING</h3>
                 <img class="card-img" src="imgs/fl-studio-mastering.jpg" alt="Mixer">
-                <p><strong>Industry standards</strong> have been <strong>redefined</strong> by <strong>streaming platforms</strong>. Tracks <strong>must compete</strong> with <strong>commercial levels</strong>. Precise <strong>loudness measurements</strong> and concise <strong>refinement</strong> will get your <strong>final master</strong> that cohesive, <strong>release ready</strong> sound you have been looking for.</p>
+                <p><strong>Industry standards</strong> have been <strong>redefined</strong> by <strong>streaming
+                    platforms</strong>. Tracks <strong>must compete</strong> with <strong>commercial levels</strong>.
+                  Precise <strong>loudness measurements</strong> and concise <strong>refinement</strong> will get your
+                  <strong>final master</strong> that cohesive, <strong>release ready</strong> sound you have been
+                  looking for.</p>
               </div>
               <div class="flip-card-back">
-                <h4>Balance & Levels</h4> 
-                <p>Proper gain staging and leveling can even out a track and prevent distortion. Head room is imperative on final mixes to allow the mastering process to thrive.</p>
+                <h4>Balance & Levels</h4>
+                <p>Proper gain staging and leveling can even out a track and prevent distortion. Head room is imperative
+                  on final mixes to allow the mastering process to thrive.</p>
                 <h4>EQ & Compression</h4>
-                <p>Professional EQ can shape and control each vibration across the frequency spectrum to distinguish individual sounds. Purposeful compression can tame and resurface decibals, all while maintaining dynamic range.</p>
+                <p>Professional EQ can shape and control each vibration across the frequency spectrum to distinguish
+                  individual sounds. Purposeful compression can tame and resurface decibals, all while maintaining
+                  dynamic range.</p>
                 <h4>Reverb & Delay</h4>
-                <p>Add a new dimension to vocals and production by creating a sense of space, width and depth to help everything shine through.</p>
+                <p>Add a new dimension to vocals and production by creating a sense of space, width and depth to help
+                  everything shine through.</p>
               </div>
             </section>
           </section>
@@ -148,20 +167,28 @@ Primary use:    Portfolio
               <div class="flip-card-front">
                 <h3>PRODUCTION</h3>
                 <img class="card-img" src="imgs/fl-studio-production.jpg" alt="Mixer">
-                <p><strong>Original production</strong> with <strong>unique ambiance</strong> and a <strong>signature sound</strong> will <strong>enhance</strong> the <strong>listeners' experience</strong>. My speciality in <strong>hip hop</strong> will build the <strong>foundation</strong> to carry the <strong>rhythm</strong> and surround your <strong>vocals</strong> with <strong>distinct melodies</strong> and <strong>harmonies</strong>.</p>
+                <p><strong>Original production</strong> with <strong>unique ambiance</strong> and a <strong>signature
+                    sound</strong> will <strong>enhance</strong> the <strong>listeners' experience</strong>. My
+                  speciality in <strong>hip hop</strong> will build the <strong>foundation</strong> to carry the
+                  <strong>rhythm</strong> and surround your <strong>vocals</strong> with <strong>distinct
+                    melodies</strong> and <strong>harmonies</strong>.</p>
               </div>
               <div class="flip-card-back">
-                <h4>Balance & Levels</h4> 
-                <p>Proper gain staging and leveling can even out a track and prevent distortion. Head room is imperative on final mixes to allow the mastering process to thrive.</p>
+                <h4>Balance & Levels</h4>
+                <p>Proper gain staging and leveling can even out a track and prevent distortion. Head room is imperative
+                  on final mixes to allow the mastering process to thrive.</p>
                 <h4>EQ & Compression</h4>
-                <p>Professional EQ can shape and control each vibration across the frequency spectrum to distinguish individual sounds. Purposeful compression can tame and resurface decibals, all while maintaining dynamic range.</p>
+                <p>Professional EQ can shape and control each vibration across the frequency spectrum to distinguish
+                  individual sounds. Purposeful compression can tame and resurface decibals, all while maintaining
+                  dynamic range.</p>
                 <h4>Reverb & Delay</h4>
-                <p>Add a new dimension to vocals and production by creating a sense of space, width and depth to help everything shine through.</p>
+                <p>Add a new dimension to vocals and production by creating a sense of space, width and depth to help
+                  everything shine through.</p>
               </div>
             </section>
           </section>
         </div>
-        
+
         <div class="main-row-3">
           <section class="flip-card">
             <section class="flip-card-inner">
@@ -169,56 +196,66 @@ Primary use:    Portfolio
                 <h3>TESTIMONIALS</h3>
               </div>
               <div class="flip-card-back">
-                <h1>John Doe</h1> 
-                <p>Architect & Engineer</p> 
+                <h1>John Doe</h1>
+                <p>Architect & Engineer</p>
                 <p>We love that guy</p>
               </div>
             </section>
           </section>
-        </div>
-        
-      </main>
-      
-      <section id="social" class="social-links">
-          <div class="social-col-1">
-            <a href="#">
-              <img class="social-size" src="imgs/fb-circle-teal.svg" alt="Facebook logo">
-            </a>
-          </div>
-          <div class="social-col-2">
-            <a href="#">
-              <img class="social-size" src="imgs/insta-circle-teal.svg" alt="Instagram logo">
-            </a>
-          </div>
-          <div class="social-col-3">
-            <a href="#">
-              <img class="social-size" src="imgs/twitter-circle-teal.svg" alt="Twitter logo">
-            </a>
-          </div>
-          <div class="social-col-4">
-            <a href="#">
-              <img class="social-size" src="imgs/yt-circle-teal.svg" alt="YouTube logo">
-            </a>
-          </div>
-          <div class="social-col-5">
-            <a href="#">
-              <img class="social-size" src="imgs/sc-circle-teal.svg" alt="SoundCloud logo">
-            </a>
-          </div>
-          <div class="social-col-6">
-            <a href="#">
-              <img class="social-size" src="imgs/email-circle-teal.svg" alt="Email logo">
-            </a>
-          </div>
-      </section>
-     
-      <footer id="footer" class="footer-links">
-          <div class="footer-col-1">Copyright © 2008-2019 <a href="https://www.jenkinsaudio.com/">Jenkins Audio</a></div>
-          <div class="footer-col-2">Designed by <a href="https://www.johngrattan.com/" target="_blank">John Grattan</a></div>
-      </footer>
+        </div> -->
 
-    </section> <!-- wrapper close -->
-  </div> <!-- bg close -->
-  <script src="js/scripts.js"></script>
+
+
+  <section id="test1">
+    <h2>TEST1</h2>
+  </section>
+
+  <section id="test2">
+    <h2>TEST2</h2>
+  </section>
+
+  <section id="social" class="social-links">
+    <div class="social-col-1">
+      <a href="#">
+        <img class="social-size" src="imgs/fb-circle-teal.svg" alt="Facebook logo">
+      </a>
+    </div>
+    <div class="social-col-2">
+      <a href="#">
+        <img class="social-size" src="imgs/insta-circle-teal.svg" alt="Instagram logo">
+      </a>
+    </div>
+    <div class="social-col-3">
+      <a href="#">
+        <img class="social-size" src="imgs/twitter-circle-teal.svg" alt="Twitter logo">
+      </a>
+    </div>
+    <div class="social-col-4">
+      <a href="#">
+        <img class="social-size" src="imgs/yt-circle-teal.svg" alt="YouTube logo">
+      </a>
+    </div>
+    <div class="social-col-5">
+      <a href="#">
+        <img class="social-size" src="imgs/sc-circle-teal.svg" alt="SoundCloud logo">
+      </a>
+    </div>
+    <div class="social-col-6">
+      <a href="#">
+        <img class="social-size" src="imgs/email-circle-teal.svg" alt="Email logo">
+      </a>
+    </div>
+  </section>
+
+  <footer id="footer" class="footer-links">
+    <div class="footer-col-1">
+      Copyright © 2008-2019 <a href="https://www.jenkinsaudio.com/">Jenkins Audio</a>
+    </div>
+    <div class="footer-col-2">
+      Designed & Developed by <a href="https://www.johngrattan.com/" target="_blank">John Grattan</a>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

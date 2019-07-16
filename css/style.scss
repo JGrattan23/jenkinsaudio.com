@@ -1,0 +1,171 @@
+/*------------------------------------------------------------------
+
+[Master Stylesheet]
+
+Project:    Jenkins Audio
+Version:    1.1
+Last change:    05/10/19 [updates: mobile first, social]
+Assigned to:    John Grattan
+Primary use:    Portfolio
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+1. #IMPORTS
+2. #MIXINS
+3. #GLOBAL
+4. #DEBUG
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------*\
+  #IMPORTS
+\*------------------------------------*/
+
+@import '_variables';
+@import '_logo';
+@import '_header';
+@import '_main';
+@import '_social';
+@import '_footer';
+// @import 'media-queries'
+
+/*------------------------------------*\
+  #MIXINS
+\*------------------------------------*/
+
+@mixin flexCenter($direction) {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin fixedTop() {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@mixin fixedBottom() {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*------------------------------------*\
+  #GLOBAL
+\*------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  color: white;
+  font: 16px 'PT Sans Narrow', sans-serif;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 4.0rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#home {
+  @include flexCenter(column);
+}
+
+.bg {
+  background-attachment: fixed;
+  background-image: url(../imgs/mixer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+/*------------------------------------*\
+  #WRAPPER
+\*------------------------------------*/
+
+// .wrapper {
+//   height: 100%;
+//   width: 100%;
+//   padding: 20px;
+//   margin: auto;
+//   @include flexCenter(column);
+// }
+
+
+
+
+
+
+
+
+
+
+#test1 {
+  @include flexCenter(column);
+  // height: 100vh;
+  // margin: 300px auto;
+  background: darkblue;
+}
+
+#test2 {
+  @include flexCenter(column);
+  background: darkgreen;
+}
+
+
+/*------------------------------------*\
+  #DEBUG
+\*------------------------------------*/
+
+
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
