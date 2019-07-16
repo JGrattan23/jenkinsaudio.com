@@ -34,37 +34,12 @@ Primary use:    Portfolio
 // @import 'media-queries'
 
 /*------------------------------------*\
-  #MIXINS
-\*------------------------------------*/
-
-@mixin flexCenter($direction) {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
-}
-
-@mixin fixedTop() {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-@mixin fixedBottom() {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/*------------------------------------*\
   #GLOBAL
 \*------------------------------------*/
 
 * {
   margin: 0;
   padding: 0;
-  // overflow: hidden;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -137,15 +112,6 @@ p {
 //   @include flexCenter(column);
 // }
 
-
-
-
-
-
-
-
-
-
 #test1 {
   @include flexCenter(column);
   // height: 100vh;
@@ -158,11 +124,9 @@ p {
   background: darkgreen;
 }
 
-
 /*------------------------------------*\
   #DEBUG
 \*------------------------------------*/
-
 
 /* * {
   background: #000 !important;

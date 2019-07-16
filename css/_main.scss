@@ -2,6 +2,14 @@
   #MAIN
 \*------------------------------------*/
 
+@mixin flexCenter($direction) {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
 #main {
   @include flexCenter(column);
   font-size: 1.5em;

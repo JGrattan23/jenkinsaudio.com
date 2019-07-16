@@ -16,12 +16,7 @@ Primary use:    Portfolio
 1. #IMPORTS
 2. #MIXINS
 3. #GLOBAL
-4. #HEADER
-5. #MAIN
-6. #SOCIAL
-7. #FOOTER
-8. #MEDIA QUERIES
-9. #DEBUG
+4. #DEBUG
 
 -------------------------------------------------------------------*/
 /*------------------------------------*\
@@ -31,222 +26,13 @@ Primary use:    Portfolio
   #VARIABLES
 \*------------------------------------*/
 /*------------------------------------*\
-  #SOCIAL
-\*------------------------------------*/
-#social {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-  grid-gap: 5px;
-      grid-template-areas: "fb  insta  twitter" "yt  sc email";
-  min-width: 320px;
-}
-
-.social-links img {
-  opacity: 0.8;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.social-links img:hover {
-  background-color: #9e5245;
-  border-radius: 50%;
-  opacity: 1;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.social-size {
-  width: 50px;
-}
-
-.social-col-1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: fb;
-}
-
-.social-col-2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: insta;
-}
-
-.social-col-3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: twitter;
-}
-
-.social-col-4 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: yt;
-}
-
-.social-col-5 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: sc;
-}
-
-.social-col-6 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: email;
-}
-
-/*------------------------------------*\
-  #FOOTER
-\*------------------------------------*/
-#footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #272727;
-  border: #5a798d solid 1px;
-  font: 'Open Sans Condensed', sans-serif;
-  text-transform: uppercase;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "copyright" "design";
-  min-width: 320px;
-}
-
-.footer-links a {
-  color: #15b4a9;
-  font: 1em 'Open Sans Condensed', sans-serif;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: #9e5245;
-}
-
-.footer-col-1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: copyright;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.footer-col-2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: design;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-/*------------------------------------*\
-  #MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-  #GLOBAL
-\*------------------------------------*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-html,
-body {
-  color: white;
-  font: 16px 'PT Sans Narrow', sans-serif;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1 {
-  font-size: 4.0rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 2.25rem;
-}
-
-h4 {
-  font-size: 1.8rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1.2rem;
-}
-
-p {
-  font-size: 1.2rem;
-}
-
-#home {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.bg {
-  background-attachment: fixed;
-  background-image: url(../imgs/mixer-bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  min-width: 320px;
-  width: 100%;
-  position: relative;
-}
-
-/*------------------------------------*\
-  #WRAPPER
-\*------------------------------------*/
-/*------------------------------------*\
   #LOGO
 \*------------------------------------*/
 #logo {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  color: lightgray;
-  background: #272727;
-  font-size: 1.0rem;
-  font-weight: 400;
-  letter-spacing: 1.0rem;
-  padding-left: 1.0rem;
-  text-align: center;
-  text-shadow: 3px 3px 5px black;
-  text-transform: uppercase;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 200px;
 }
 
 /*------------------------------------*\
@@ -254,22 +40,9 @@ p {
 \*------------------------------------*/
 #header {
   position: fixed;
-  top: 20px;
   width: 100%;
   background: #9e5245;
   height: 3rem;
-}
-
-#dbmeter {
-  font: normal 16px sans-serif;
-  vertical-align: middle;
-}
-
-:root {
-  --screen-width: 320px;
-  --screen-height: 560px;
-  --header-bg-color: #673AB7;
-  --splash-bg-color: #368887;
 }
 
 .nav__toggle {
@@ -281,7 +54,7 @@ p {
   background: transparent;
   outline: 0;
   right: 15px;
-  top: 15px;
+  top: 0;
   cursor: pointer;
   border-radius: 50%;
   -webkit-transition: background-color .15s linear;
@@ -303,7 +76,6 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: var(--screen-height);
   position: relative;
   z-index: 5;
   visibility: hidden;
@@ -591,6 +363,214 @@ p {
   position: relative;
 }
 
+/*------------------------------------*\
+  #SOCIAL
+\*------------------------------------*/
+#social {
+  background-attachment: fixed;
+  background-image: url(../imgs/mixer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+  padding: 25px 0;
+  bottom: 205px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+      grid-template-areas: "fb  insta  twitter" "yt  sc email";
+  min-width: 320px;
+}
+
+.social-links img {
+  opacity: 0.8;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.social-links img:hover {
+  background-color: #9e5245;
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.social-size {
+  width: 50px;
+}
+
+.social-col-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: fb;
+}
+
+.social-col-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: insta;
+}
+
+.social-col-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: twitter;
+}
+
+.social-col-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: yt;
+}
+
+.social-col-5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: sc;
+}
+
+.social-col-6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: email;
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #272727;
+  border: #5a798d solid 1px;
+  font: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "copyright" "design";
+  min-width: 320px;
+}
+
+.footer-links a {
+  color: #15b4a9;
+  font: 1em 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #9e5245;
+}
+
+.footer-col-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: copyright;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer-col-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: design;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/*------------------------------------*\
+  #GLOBAL
+\*------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  color: white;
+  font: 16px 'PT Sans Narrow', sans-serif;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 4.0rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#home {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg {
+  background-attachment: fixed;
+  background-image: url(../imgs/mixer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+/*------------------------------------*\
+  #WRAPPER
+\*------------------------------------*/
 #test1 {
   height: 100vh;
   display: -webkit-box;
