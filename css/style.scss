@@ -29,6 +29,10 @@ Primary use:    Portfolio
 @import '_logo';
 @import '_header';
 @import '_main';
+@import '_services';
+@import '_store';
+@import '_about';
+@import '_contact';
 @import '_social';
 @import '_footer';
 // @import 'media-queries'
@@ -57,7 +61,7 @@ body {
 }
 
 h1 {
-  font-size: 4.0rem;
+  font-size: 3.0rem;
 }
 
 h2 {
@@ -88,9 +92,73 @@ p {
   @include flexCenter(column);
 }
 
-.bg {
+.bg-home {
   background-attachment: fixed;
   background-image: url(../imgs/mixer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+#services {
+  @include flexCenter(column);
+}
+
+.bg-services {
+  background-attachment: fixed;
+  background-image: url(../imgs/studio-foam-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+#mixing {
+  @include flexCenter(column);
+}
+
+.bg-mixing {
+  background-attachment: fixed;
+  background-image: url(../imgs/mixer-1-red.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+#mastering {
+  @include flexCenter(column);
+}
+
+.bg-mastering {
+  background-attachment: fixed;
+  background-image: url(../imgs/adam-audio-t7v.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+#production {
+  @include flexCenter(column);
+}
+
+.bg-production {
+  background-attachment: fixed;
+  background-image: url(../imgs/midi-key-1-red.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,12 +180,7 @@ p {
 //   @include flexCenter(column);
 // }
 
-#test1 {
-  @include flexCenter(column);
-  // height: 100vh;
-  // margin: 300px auto;
-  background: darkblue;
-}
+
 
 #test2 {
   @include flexCenter(column);

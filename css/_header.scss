@@ -4,6 +4,7 @@
 
 #header {
   position: fixed;
+  top: 0;
   width: 100%;
   background: $midtone;
   height: 3rem;
@@ -21,6 +22,7 @@
 // ---------------------------
 
 .nav {
+  margin-top: 25%;
 
   // Toggle Button
   &__toggle {
@@ -47,7 +49,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // height: 1.0rem;
     position: relative;
     z-index: 5;
     visibility: hidden;
@@ -70,7 +71,7 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     text-decoration: none;
     padding: 1rem;
 

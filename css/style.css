@@ -40,9 +40,14 @@ Primary use:    Portfolio
 \*------------------------------------*/
 #header {
   position: fixed;
+  top: 0;
   width: 100%;
   background: #9e5245;
   height: 3rem;
+}
+
+.nav {
+  margin-top: 25%;
 }
 
 .nav__toggle {
@@ -118,7 +123,7 @@ Primary use:    Portfolio
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   text-decoration: none;
   padding: 1rem;
 }
@@ -264,7 +269,7 @@ Primary use:    Portfolio
 
 #headline {
   color: #81c1e8;
-  font-weight: 400;
+  font-weight: 700;
   display: block;
   text-shadow: 3px 3px 5px black;
 }
@@ -512,7 +517,7 @@ body {
 }
 
 h1 {
-  font-size: 4.0rem;
+  font-size: 3.0rem;
 }
 
 h2 {
@@ -556,7 +561,7 @@ p {
           flex-direction: column;
 }
 
-.bg {
+.bg-home {
   background-attachment: fixed;
   background-image: url(../imgs/mixer-bg.jpg);
   background-position: center;
@@ -568,10 +573,7 @@ p {
   position: relative;
 }
 
-/*------------------------------------*\
-  #WRAPPER
-\*------------------------------------*/
-#test1 {
+#services {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -586,9 +588,110 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: darkblue;
 }
 
+.bg-services {
+  background-attachment: fixed;
+  background-image: url(../imgs/studio-foam-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+#mixing {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg-mixing {
+  background-attachment: fixed;
+  background-image: url(../imgs/mixer-1-red.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+#mastering {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg-mastering {
+  background-attachment: fixed;
+  background-image: url(../imgs/adam-audio-t7v.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+#production {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg-production {
+  background-attachment: fixed;
+  background-image: url(../imgs/midi-key-1-red.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+}
+
+/*------------------------------------*\
+  #WRAPPER
+\*------------------------------------*/
 #test2 {
   height: 100vh;
   display: -webkit-box;
