@@ -272,6 +272,7 @@ Primary use:    Portfolio
   font-weight: 700;
   display: block;
   text-shadow: 3px 3px 5px black;
+  margin-bottom: 20px;
 }
 
 .head-break {
@@ -621,7 +622,7 @@ p {
 
 .bg-mixing {
   background-attachment: fixed;
-  background-image: url(../imgs/mixer-1-red.jpg);
+  background-image: url(../imgs/mixer-1-red-sm.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -687,6 +688,44 @@ p {
   min-width: 320px;
   width: 100%;
   position: relative;
+}
+
+.container {
+  position: relative;
+  width: 70%;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #9e5245;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #272727;
+  color: white;
+  font-size: 16px;
+  padding: 16px 30px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 3px solid #9e5245;
+}
+
+.container .btn:hover {
+  background-color: #15b4a9;
+  color: white;
 }
 
 /*------------------------------------*\

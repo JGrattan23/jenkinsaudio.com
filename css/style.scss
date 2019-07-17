@@ -126,7 +126,7 @@ p {
 
 .bg-mixing {
   background-attachment: fixed;
-  background-image: url(../imgs/mixer-1-red.jpg);
+  background-image: url(../imgs/mixer-1-red-sm.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,6 +166,43 @@ p {
   min-width: 320px;
   width: 100%;
   position: relative;
+}
+
+
+
+.container {
+  position: relative;
+  width: 70%;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid $midtone;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: $shadow;
+  color: white;
+  font-size: 16px;
+  padding: 16px 30px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 3px solid $midtone;
+}
+
+.container .btn:hover {
+  background-color: $accent;
+  color: white;
 }
 
 /*------------------------------------*\
